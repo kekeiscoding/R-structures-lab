@@ -186,5 +186,45 @@ paste(first_name, last_name, sep = "-")
 ```
 The argument uses - instead of a blank space.
 
+```{r}
+full_name <- "Juan Dela Cruz"
+age <- "21 years old"
+text <- "is"
+paste(full_name, text, age)
+
+```
+paste() combined all my variables and created a sentence.
+
+Question #7: paste() and paste0() produced different results for the same two strings. Explain exactly why, referencing what each function does by default.
+
+paste() uses a blank space to combine characters, while paste0() does not use blank spaces when combining characters.
+
+Question #8: In the strings-numbers chunk, you combined a character string with a numeric variable (age) using paste0() without first converting age to a string.
+
+### Did this cause an error? Explain what paste0() does internally to make this work, and how it relates to the type conversions you practiced in Part C.
+
+The paste0() function in R is designed to handle different data types automatically. When you pass a numeric variable like age into paste0(), R automatically performs an internal implicit type coercion. It converts the numeric value into a character string before concatenating it with the other text.
+
+## Part E — Critical Thinking Challenge
+
+```{r}
+sum = 5 + 5
+sum
+```
+The "5" + 5 did not work since it is not compatible with the conversion, but if you do 5 + 5, then it will work since they are both numerical and can be converted.
+
+Question #9: Some programming languages automatically convert "5" + 5 into 10 without an error. R does not.
+
+### Based on what you’ve learned about R’s data types in this lab, why do you think R requires an explicit conversion instead of guessing what the programmer meant?
+
+In R, strict data type safety and the prevention of silent errors are the primary reasons why the language requires explicit conversion instead of guessing the programmer's intent.
+
+Question #10: Suppose a classmate writes a script that reads a column of “numbers” from a text file. The column looks numeric, but when they try sum() on it, R throws an error. Based on everything in this lab (types, typeof()/class()/mode(), conversion, warnings), write a short paragraph explaining what likely went wrong and the steps you’d take to diagnose and fix it.
+
+The error likely occurred because R imported the column as a character vector or a factor, rather than a numeric vector
+
+# Conclusion
+In R, data types like logical, integer, double, and character tells you how information is stored and processed. R uses implicit coercion during arithmetic operations, often quietly turning logical values into numbers or throwing errors if characters are involved. Understanding typeof() and class() matters because it allows you to verify the exact structure of your data before manipulating it, preventing unexpected behavior. Master functions like as.numeric() or as.character() ensures that data combinations and calculations yield predictable, accurate results without breaking your workflows.
+
 
 

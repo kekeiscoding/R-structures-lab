@@ -565,6 +565,37 @@ paste(first_name, last_name)</code></pre>
 last_name &lt;- &quot;Dela Cruz&quot;
 paste(first_name, last_name, sep = &quot;-&quot;)</code></pre>
 <pre><code>## [1] &quot;Juan-Dela Cruz&quot;</code></pre>
+<p>The argument uses - instead of a blank space.</p>
+<pre class="r"><code>full_name &lt;- &quot;Juan Dela Cruz&quot;
+age &lt;- &quot;21 years old&quot;
+text &lt;- &quot;is&quot;
+paste(full_name, text, age)</code></pre>
+<pre><code>## [1] &quot;Juan Dela Cruz is 21 years old&quot;</code></pre>
+<p>paste() combined all my variables and created a sentence.</p>
+<p>Question #7: paste() and paste0() produced different results for the
+same two strings. Explain exactly why, referencing what each function
+does by default.</p>
+<p>paste() uses a blank space to combine characters, while paste0() does
+not use blank spaces when combining characters.</p>
+<p>Question #8: In the strings-numbers chunk, you combined a character
+string with a numeric variable (age) using paste0() without first
+converting age to a string.</p>
+<div id="did-this-cause-an-error-explain-what-paste0-does-internally-to-make-this-work-and-how-it-relates-to-the-type-conversions-you-practiced-in-part-c." class="section level3">
+<h3>Did this cause an error? Explain what paste0() does internally to
+make this work, and how it relates to the type conversions you practiced
+in Part C.</h3>
+<p>The paste0() function in R is designed to handle different data types
+automatically. When you pass a numeric variable like age into paste0(),
+R automatically performs an internal implicit type coercion. It converts
+the numeric value into a character string before concatenating it with
+the other text.</p>
+</div>
+</div>
+<div id="part-e-critical-thinking-challenge" class="section level2">
+<h2>Part E — Critical Thinking Challenge</h2>
+<pre class="r"><code>sum = 5 + 5
+sum</code></pre>
+<pre><code>## [1] 10</code></pre>
 </div>
 
 
