@@ -1,0 +1,190 @@
+---
+title: "RExercise#2_Prudente"
+author: "Keane Gabriel Prudente"
+date: "2026-09-30"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Lab: Arithmetic Operations and Basic Data Types
+Keane Gabriel Prudente
+
+### Introduction
+## Part A - Arithmetic Operations
+
+```{r}
+a <- 17
+b <- 5
+
+add <- a + b
+sub <- a - b
+multiply <- a * b
+divide <- a / b
+
+add
+sub
+multiply
+divide
+```
+
+When I run the code, it displays all the operations on screen because I assigned values to the variables and I used arithmetic operations on those said variables.
+
+```{r}
+a <- 17
+b <- 5
+
+modulo <- a %% b
+integer <- a %/% b
+
+```
+In the modulo, it takes the remainder of the answer, that is why it is 2. In the integer part, it is 3 because it divides the numbers.
+
+```{r}
+a <- 2 ^ 10
+a
+```
+When I assign this value to a, it prints out 2 raised to 10.
+
+Question #1: Run 17/5, 17 %% 5, and 17 %/% 5 side by side. In your own words, explain how these three results relate to each other mathematically.
+
+17/5 prints out 3 since 17 divided by 5 is 3. For the modulo, it prints out 2 since 2 is the remainder. For the %/% is prints out 3 since it also divides. Three of them corellates with each other since they are also almost the same operations.
+
+Question #2: Predict the output of 10 %% 3 and 10 %/% 3 before running the code. Were you correct? If not, explain what you misunderstood.
+
+Yes I was correct, because it is simple division with remainder.
+
+## Part B — Basic Data Types: typeof(), class(), and mode()
+R has several basic data types: double (decimal numbers), integer, character (text), logical (TRUE/FALSE), and complex. typeof() reports the low-level storage type; class() reports the object’s class, which is sometimes more general.
+
+```{r}
+x <- 42
+y <- 42L
+z <- "42"
+w <- TRUE
+v <- 3 + 2i 
+
+typeof(x)
+typeof(y)
+typeof(z)
+typeof(w)
+typeof(v)
+
+```
+When I use typeof(), it check whether or not the value is an integer, double, character, etc... This is a good way to check what type of value is assigned to the variable.
+
+```{r}
+x <- 42
+y <- 42L
+z <- "42"
+w <- TRUE
+v <- 3 + 2i 
+
+class(x)
+class(y)
+class(z)
+class(w)
+class(v)
+```
+When using class(), it checks if the value is numeric, integer, character, logical, complex, etc... This is also a good way to check what the class of the value is easily.
+
+```{r}
+x <- 42
+y <- 42L
+z <- "42"
+w <- TRUE
+v <- 3 + 2i 
+
+mode(x)
+mode(y)
+mode(z)
+mode(w)
+mode(v)
+```
+Mode checks what type of data the variable is storing.
+
+Question #3): x <- 42 and y <- 42L look almost identical, but typeof(x) and typeof(y) give different answers. Explain the difference in your own words.
+
+The difference is very common since x only contains 42 while y contains 42L, while x is a numeric, y on the other hand contains a letter.
+
+Question #4: Is typeof() ever different from class() and from mode() for the same object? Look at your results above and explain any case where this happens (or, if you did not see one, explain what you would expect for a matrix or factor).
+
+typeof() checks the internal base type of a variable, class() checks the abstract type of the variable, and mode() is similar to typeof(), but it is less precise.
+
+## Part C — Type Conversion (20 min)
+R can convert (coerce) values between types using functions like as.numeric(), as.integer(), as.character(), and as.logical().
+
+```{r}
+num_string <- "123"
+as.numeric(num_string)
+num_string
+typeof(num_string)
+class(num_string)
+mode(num_string)
+```
+It does not convert to numeric, it displays character in the console.
+
+```{r}
+as.logical(0)
+as.logical(1)
+```
+For the logical(0), it displays false and for the logical(1), it displays true. This is because 0 is considered false and 1 is considered true in programming.
+
+```{r}
+bad_string <- "hello123"
+as.numeric(bad_string)
+bad_string
+```
+A warning displayed "NAs introduced by coercion" and the result is "hello123".
+
+
+Question #5: When you ran the conversion-fail chunk, R produced NA and a warning instead of stopping with an error.
+
+### Why do you think R is designed to give a warning here rather than crashing the whole script?
+
+I think crashing the whole script is unnecessary and not useful when it comes to coding, that is why R is designed to only give a warning and not crash the whole script or else everything would be gone in an instant.
+
+### What are the risks of this behavior if you don’t read your warnings?
+
+Warning are there for a reason, they help you check whether or not you did something wrong. Not reading warnings can result to more errors in the future.
+
+Question #6: as.logical(0) and as.logical(1) convert to FALSE and TRUE.
+
+### What do you think as.logical(2) and as.logical(-1)` will produce?
+
+Both as.logical(2) and as.logical(-1) will produce 2.
+
+### Test it, then explain the rule R seems to be following.
+
+R seems to follow the non-zero rule on the logical area since if the value is 0 it is considered false.
+
+## Part D — Strings, paste(), and paste0()
+Strings are stored as the character type. paste() joins strings with a space separator by default; paste0() joins them with no separator.
+
+```{r}
+first_name <- "Juan"
+last_name <- "Dela Cruz"
+cat(first_name, last_name)
+```
+It prints both of it together with the use of cat().
+
+```{r}
+first_name <- "Juan"
+last_name <- "Dela Cruz"
+paste(first_name, last_name)
+paste0(first_name, last_name)
+
+```
+paste() puts blank spaces while paste0() does not use blanks.
+
+```{r}
+first_name <- "Juan"
+last_name <- "Dela Cruz"
+paste(first_name, last_name, sep = "-")
+```
+The argument uses - instead of a blank space.
+
+
+
