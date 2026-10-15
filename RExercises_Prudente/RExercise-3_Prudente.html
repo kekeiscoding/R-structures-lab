@@ -13,7 +13,7 @@
 
 <meta name="date" content="2026-10-14" />
 
-<title>RExercise#3_Prudente.Rmd</title>
+<title>R Lab: Data Structures - Vectors and Lists</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,18 +350,14 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">RExercise#3_Prudente.Rmd</h1>
+<h1 class="title toc-ignore">R Lab: Data Structures - Vectors and
+Lists</h1>
 <h4 class="author">Keane Gabriel Prudente</h4>
 <h4 class="date">2026-10-14</h4>
 
 </div>
 
 
-<div id="r-lab-data-structures---vectors-and-lists" class="section level1">
-<h1>R Lab: Data Structures - Vectors and Lists</h1>
-<div id="keane-gabriel-prudente" class="section level3">
-<h3>Keane Gabriel Prudente</h3>
-</div>
 <div id="part-a-creating-vectors-c-seq-rep" class="section level2">
 <h2>Part A — Creating Vectors: c(), seq(), rep()</h2>
 <pre class="r"><code>numeric &lt;- c(88, 92, 79, 95, 84)
@@ -382,13 +378,14 @@ even</code></pre>
 <pre><code>## [1] &quot;A&quot; &quot;A&quot; &quot;B&quot; &quot;B&quot;</code></pre>
 <pre class="r"><code>rep(c(&quot;A&quot;, &quot;B&quot;), times = 2)</code></pre>
 <pre><code>## [1] &quot;A&quot; &quot;B&quot; &quot;A&quot; &quot;B&quot;</code></pre>
+<p>Question #1</p>
 <pre class="r"><code>age &lt;- c(15, 28, 32, 36, 27, 18, 52, 39, 42, 29, 35, 31, 27, 22, 37, 34, 19, 20, 57, 49, 50, 37, 46, 25, 17, 12, 42, 53, 41, 51, 35, 24, 33, 8)</code></pre>
-<div id="how-many-data-points" class="section level3">
-<h3>How many data points?</h3>
+<div id="how-many-data-points" class="section level4">
+<h4>How many data points?</h4>
 <p>There are 34 data points located inside the vector.</p>
 </div>
-<div id="find-the-reciprocal-of-age" class="section level3">
-<h3>Find the reciprocal of age?</h3>
+<div id="find-the-reciprocal-of-age" class="section level4">
+<h4>Find the reciprocal of age?</h4>
 <pre class="r"><code>1/age</code></pre>
 <pre><code>##  [1] 0.06666667 0.03571429 0.03125000 0.02777778 0.03703704 0.05555556
 ##  [7] 0.01923077 0.02564103 0.02380952 0.03448276 0.02857143 0.03225806
@@ -397,9 +394,9 @@ even</code></pre>
 ## [25] 0.05882353 0.08333333 0.02380952 0.01886792 0.02439024 0.01960784
 ## [31] 0.02857143 0.04166667 0.03030303 0.12500000</code></pre>
 </div>
-<div id="assign-also-new_age---cage-0-age.-what-happens-to-new_age" class="section level3">
-<h3>Assign also new_age &lt;- c(age, 0, age). What happens to
-new_age?</h3>
+<div id="assign-also-new_age---cage-0-age.-what-happens-to-new_age" class="section level4">
+<h4>Assign also new_age &lt;- c(age, 0, age). What happens to
+new_age?</h4>
 <pre class="r"><code>age &lt;- c(15, 28, 32, 36, 27, 18, 52, 39, 42, 29, 35, 31, 27, 22, 37, 34, 19, 20, 57, 49, 50, 37, 46, 25, 17, 12, 42, 53, 41, 51, 35, 24, 33, 8)
 
 new_age &lt;- c(age, 0, age)
@@ -407,21 +404,21 @@ length(new_age)</code></pre>
 <pre><code>## [1] 69</code></pre>
 <p>new_age becomes 69 since it is 34 + 1 + 34 = 69.</p>
 </div>
-<div id="d-find-the-minimum-and-the-maximum-value-of-age." class="section level3">
-<h3>d: Find the minimum and the maximum value of age.</h3>
+<div id="d-find-the-minimum-and-the-maximum-value-of-age." class="section level4">
+<h4>d: Find the minimum and the maximum value of age.</h4>
 <pre class="r"><code>min(age)</code></pre>
 <pre><code>## [1] 8</code></pre>
 <pre class="r"><code>max(age)</code></pre>
 <pre><code>## [1] 57</code></pre>
 <p>Question #2:</p>
 </div>
-<div id="repcab-each-2-and-repcab-times-2-both-produce-a-vector-of-length-4-but-with-different-element-orders." class="section level3">
-<h3>rep(c(“A”,“B”), each = 2) and rep(c(“A”,“B”), times = 2) both
-produce a vector of length 4, but with different element orders.</h3>
+<div id="repcab-each-2-and-repcab-times-2-both-produce-a-vector-of-length-4-but-with-different-element-orders." class="section level4">
+<h4>rep(c(“A”,“B”), each = 2) and rep(c(“A”,“B”), times = 2) both
+produce a vector of length 4, but with different element orders.</h4>
 </div>
-<div id="explain-in-your-own-words-the-difference-between-each-and-times." class="section level3">
-<h3>Explain in your own words the difference between each and
-times.</h3>
+<div id="explain-in-your-own-words-the-difference-between-each-and-times." class="section level4">
+<h4>Explain in your own words the difference between each and
+times.</h4>
 <pre class="r"><code>rep(c(&quot;A&quot;, &quot;B&quot;), each = 2)</code></pre>
 <pre><code>## [1] &quot;A&quot; &quot;A&quot; &quot;B&quot; &quot;B&quot;</code></pre>
 <pre class="r"><code>rep(c(&quot;A&quot;, &quot;B&quot;), times = 2)</code></pre>
@@ -430,27 +427,230 @@ times.</h3>
 the A B format twice.</p>
 <p>Question #3:</p>
 </div>
-<div id="compare-seq1-20-by-2-with-seq1-20-length.out-5.-what-does-each-argument-by-vs-length.out-control-and-when-would-you-use-one-over-the-other-in-a-real-analysis" class="section level3">
-<h3>Compare seq(1, 20, by = 2) with seq(1, 20, length.out = 5). What
+<div id="compare-seq1-20-by-2-with-seq1-20-length.out-5.-what-does-each-argument-by-vs-length.out-control-and-when-would-you-use-one-over-the-other-in-a-real-analysis" class="section level4">
+<h4>Compare seq(1, 20, by = 2) with seq(1, 20, length.out = 5). What
 does each argument (by vs length.out) control, and when would you use
-one over the other in a real analysis?</h3>
+one over the other in a real analysis?</h4>
+<pre class="r"><code>seq(1, 20, by = 2)</code></pre>
+<pre><code>##  [1]  1  3  5  7  9 11 13 15 17 19</code></pre>
+<pre class="r"><code>seq(1, 20, length.out = 5)</code></pre>
+<pre><code>## [1]  1.00  5.75 10.50 15.25 20.00</code></pre>
+<p>by = 2 decides a gap between the variables 1, 3, 5. Length.out
+controls how many values you get from 1 - 20.</p>
 <p>Question #4:</p>
 </div>
-<div id="generate-a-sequence-for-20-to-60.-name-the-vector-as-vec_num" class="section level3">
-<h3>Generate a sequence for 20 to 60. Name the vector as vec_num</h3>
+<div id="generate-a-sequence-for-20-to-60.-name-the-vector-as-vec_num" class="section level4">
+<h4>Generate a sequence for 20 to 60. Name the vector as vec_num</h4>
+<pre class="r"><code>vec_num &lt;- 20:60      </code></pre>
 </div>
-<div id="get-the-mean-for-vec_num." class="section level3">
-<h3>Get the mean for vec_num.</h3>
-<p>(Your answer here)</p>
+<div id="get-the-mean-for-vec_num." class="section level4">
+<h4>Get the mean for vec_num.</h4>
+<pre class="r"><code>mean(vec_num)    </code></pre>
+<pre><code>## [1] 40</code></pre>
 </div>
-<div id="get-the-sum-for-vec_num." class="section level3">
-<h3>Get the sum for vec_num.</h3>
-<p>(Your answer here)</p>
+<div id="get-the-sum-for-vec_num." class="section level4">
+<h4>Get the sum for vec_num.</h4>
+<pre class="r"><code>sum(vec_num) </code></pre>
+<pre><code>## [1] 1640</code></pre>
 </div>
-<div id="d-how-many-data-points-are-there-in-vec_num" class="section level3">
-<h3>d: How many data points are there in vec_num?</h3>
-<p>(Your answer here)</p>
+<div id="d-how-many-data-points-are-there-in-vec_num" class="section level4">
+<h4>d: How many data points are there in vec_num?</h4>
+<p>There are 41 data points.</p>
 </div>
+</div>
+<div id="part-b-subsetting-accessing-vectors" class="section level2">
+<h2>Part B — Subsetting (Accessing) Vectors</h2>
+<pre class="r"><code>grades &lt;- c(88, 92, 79, 95, 84)
+names(grades) &lt;- c(&quot;Math&quot;, &quot;Science&quot;, &quot;English&quot;, &quot;History&quot;, &quot;PE&quot;)
+
+grades[3]                   </code></pre>
+<pre><code>## English 
+##      79</code></pre>
+<pre class="r"><code>grades[c(1, 4)]              </code></pre>
+<pre><code>##    Math History 
+##      88      95</code></pre>
+<pre class="r"><code>grades[c(&quot;Science&quot;, &quot;PE&quot;)]   </code></pre>
+<pre><code>## Science      PE 
+##      92      84</code></pre>
+<pre class="r"><code>grades[-c(1, 4)]            </code></pre>
+<pre><code>## Science English      PE 
+##      92      79      84</code></pre>
+<pre class="r"><code>grades[grades &gt;= 85]  </code></pre>
+<pre><code>##    Math Science History 
+##      88      92      95</code></pre>
+<p>Question #5:</p>
+<div id="negative-indexing-grades-1-removes-an-element-while-logical-indexing-gradesgrades-85-filters-by-a-condition." class="section level4">
+<h4>Negative indexing (grades[-1]) removes an element, while logical
+indexing (grades[grades &gt;= 85]) filters by a condition.</h4>
+</div>
+<div id="describe-a-real-situation-where-you-would-need-negative-indexing-and-a-different-situation-where-logical-indexing-would-be-the-better-tool." class="section level4">
+<h4>Describe a real situation where you would need negative indexing,
+and a different situation where logical indexing would be the better
+tool.</h4>
+<p>Negative indexing is best when you know which positions to drop. For
+example, if a survey’s first column is an ID you don’t need, or the
+first and last rows of a sensor log are calibration readings.</p>
+<p>Logical indexing is best when you select by a property of the values
+instead of their positions. For example, you might pull every student
+who scored at least 85, or every temperature above 38°C. You don’t know
+where those values sit, and the data may change, so a condition keeps
+working.</p>
+<p>Question #6:</p>
+</div>
+<div id="what-happens-if-you-run-grades10-an-index-that-doesnt-exist-run-it-observe-the-result-and-explain-why-r-responds-this-way-instead-of-throwing-an-error." class="section level4">
+<h4>What happens if you run grades[10] (an index that doesn’t exist)?
+Run it, observe the result, and explain why R responds this way instead
+of throwing an error.</h4>
+<pre class="r"><code>grades[10]</code></pre>
+<pre><code>## &lt;NA&gt; 
+##   NA</code></pre>
+<p>R returns it as NA not error, since NA means missing a value and
+grades[10] simply has no value.</p>
+<p>Question #7:</p>
+</div>
+<div id="print-a-vector-with-the-integers-between-1-and-100-that-are-not-divisible-by-3-5-and-7-using-filter-option." class="section level4">
+<h4>Print a vector with the integers between 1 and 100 that are not
+divisible by 3, 5 and 7 using filter option.</h4>
+</div>
+<div id="filterfunctioni-alli-c357-0-seq100" class="section level4">
+<h4>Filter(function(i) { all(i %% c(3,5,7) != 0) }, seq(100))</h4>
+</div>
+<div id="write-the-r-code-and-its-output." class="section level4">
+<h4>Write the R code and its output.</h4>
+<pre class="r"><code>Filter(function(i) { all(i %% c(3, 5, 7) != 0) }, seq(100))</code></pre>
+<pre><code>##  [1]  1  2  4  8 11 13 16 17 19 22 23 26 29 31 32 34 37 38 41 43 44 46 47 52 53
+## [26] 58 59 61 62 64 67 68 71 73 74 76 79 82 83 86 88 89 92 94 97</code></pre>
+</div>
+</div>
+<div id="part-c-vector-operations-and-append" class="section level2">
+<h2>Part C: Vector Operations and append()</h2>
+<pre class="r"><code>x &lt;- c(1, 2, 3, 4)
+y &lt;- c(10, 20, 30, 40)
+x + y        </code></pre>
+<pre><code>## [1] 11 22 33 44</code></pre>
+<pre class="r"><code>x * 2        </code></pre>
+<pre><code>## [1] 2 4 6 8</code></pre>
+<pre class="r"><code>z &lt;- c(1, 2, 3, 4, 5, 6)
+short &lt;- c(1, 0)
+z + short </code></pre>
+<pre><code>## [1] 2 2 4 4 6 6</code></pre>
+<pre class="r"><code>fruits &lt;- c(&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;)
+append(fruits, &quot;date&quot;)</code></pre>
+<pre><code>## [1] &quot;apple&quot;  &quot;banana&quot; &quot;cherry&quot; &quot;date&quot;</code></pre>
+<pre class="r"><code>append(fruits, &quot;kiwi&quot;, after = 1)</code></pre>
+<pre><code>## [1] &quot;apple&quot;  &quot;kiwi&quot;   &quot;banana&quot; &quot;cherry&quot;</code></pre>
+<p>Question #8</p>
+<div id="in-the-vectors-recycling-chunk-z-has-6-elements-and-short-has-only-2.-r-still-produced-an-answer-instead-of-an-error." class="section level4">
+<h4>In the vectors-recycling chunk, z has 6 elements and short has only
+2. R still produced an answer instead of an error.</h4>
+</div>
+<div id="explain-in-your-own-words-what-rs-recycling-rule-did-to-short-to-make-the-addition-work." class="section level4">
+<h4>Explain, in your own words, what R’s “recycling rule” did to short
+to make the addition work.</h4>
+<p>R noticed that short was not enough so it short became 1,0,1,0,1,0 to
+match the length of z.</p>
+<p>Question #9: #### Now try adding z (length 6) to c(1, 0, 1) (length
+3) instead. Does it work cleanly?</p>
+<pre class="r"><code>z + c(1, 0, 1)</code></pre>
+<pre><code>## [1] 2 2 4 5 5 7</code></pre>
+<p>Yes it works cleanly.</p>
+</div>
+<div id="then-try-adding-z-to-c1-0-1-1-length-4.-compare-the-warning-or-lack-of-one-in-each-case-and-explain-what-condition-determines-whether-r-recycles-silently-versus-with-a-warning." class="section level4">
+<h4>Then try adding z to c(1, 0, 1, 1) (length 4). Compare the warning
+(or lack of one) in each case, and explain what condition determines
+whether R recycles silently versus with a warning.</h4>
+<pre class="r"><code>z + c(1, 0, 1, 1)</code></pre>
+<pre><code>## Warning in z + c(1, 0, 1, 1): longer object length is not a multiple of shorter
+## object length</code></pre>
+<pre><code>## [1] 2 2 4 5 6 6</code></pre>
+<p>The second one does not work because it is not compatible or a
+multiple of the shorter length.</p>
+</div>
+</div>
+<div id="part-d-lists-creating-and-subsetting" class="section level2">
+<h2>Part D — Lists: Creating and Subsetting</h2>
+<pre class="r"><code>student &lt;- list(
+  name = &quot;Maria Santos&quot;,
+  age = 20,
+  grades = c(88, 92, 79),
+  is_enrolled = TRUE
+)</code></pre>
+<pre class="r"><code>student[&quot;grades&quot;]; class(student[&quot;grades&quot;]) </code></pre>
+<pre><code>## $grades
+## [1] 88 92 79</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<pre class="r"><code>student[[&quot;grades&quot;]]; class(student[[&quot;grades&quot;]])</code></pre>
+<pre><code>## [1] 88 92 79</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>student$name</code></pre>
+<pre><code>## [1] &quot;Maria Santos&quot;</code></pre>
+<pre class="r"><code>student$grades[2]</code></pre>
+<pre><code>## [1] 92</code></pre>
+<p>Question #10:</p>
+<div id="studentgrades-and-studentgrades-look-similar-but-return-objects-of-different-classes." class="section level4">
+<h4>student[“grades”] and student[[“grades”]] look similar but return
+objects of different classes.</h4>
+</div>
+<div id="run-class-on-each-and-explain-the-difference-in-what-single-bracket-versus-double-bracket-return-from-a-list." class="section level4">
+<h4>Run class() on each and explain the difference in what
+single-bracket [ ] versus double-bracket [[ ]] return from a list.</h4>
+<p>Single brackets return a smaller list, while double brackets take the
+item out of the box and return the content themselves.</p>
+<p>Question #11:</p>
+</div>
+<div id="why-do-you-think-r-makes-a-distinction-between-and-for-lists-but-a-vector-only-needs-think-about-what-a-list-can-contain-that-a-vector-cannot." class="section level4">
+<h4>Why do you think R makes a distinction between [ ] and [[ ]] for
+lists, but a vector only needs [ ]? Think about what a list can contain
+that a vector cannot.</h4>
+<p>A vector only holds one type of data, while a list can hold different
+types of objects including vectors and other lists.</p>
+</div>
+</div>
+<div id="part-e-critical-thinking-challenge" class="section level2">
+<h2>Part E — Critical Thinking Challenge</h2>
+<pre class="r"><code>inventory &lt;- list(
+  item = c(&quot;Notebook&quot;, &quot;Pen&quot;, &quot;Eraser&quot;),
+  price = c(25.50, 10.00, 5.00),
+  in_stock = c(TRUE, TRUE, FALSE)
+)
+
+inventory$item[inventory$in_stock]</code></pre>
+<pre><code>## [1] &quot;Notebook&quot; &quot;Pen&quot;</code></pre>
+<pre class="r"><code>inventory$item     &lt;- append(inventory$item, &quot;Ruler&quot;)
+inventory$price    &lt;- append(inventory$price, 15.00)
+inventory$in_stock &lt;- append(inventory$in_stock, TRUE)</code></pre>
+<p>Question #12:</p>
+<div id="in-challenge-1-you-combined-logical-indexing-on-one-vector-in_stock-to-filter-a-different-vector-item-inside-the-same-list.-explain-step-by-step-why-inventoryiteminventoryin_stock-works-even-though-item-and-in_stock-are-stored-as-separate-elements-of-the-list." class="section level4">
+<h4>In challenge-1, you combined logical indexing on one vector
+(in_stock) to filter a different vector (item) inside the same list.
+Explain, step by step, why inventory<span class="math inline">\(item[inventory\)</span>in_stock] works even though
+item and in_stock are stored as separate elements of the list.</h4>
+<p>inventory<span class="math inline">\(in_stock extracts the logical
+vector, while inventory\)</span>item extracts the character vector.</p>
+<p>Question #13:</p>
+</div>
+<div id="suppose-a-classmate-stores-related-data-as-three-separate-unconnected-vectors-item_names-item_prices-item_stock-instead-of-grouping-them-into-one-list-like-inventory.-what-risks-or-bugs-could-this-create-as-the-dataset-grows-or-gets-reordered-argue-for-or-against-using-a-list-or-later-a-data-frame-instead-of-separate-vectors." class="section level4">
+<h4>Suppose a classmate stores related data as three separate,
+unconnected vectors (item_names, item_prices, item_stock) instead of
+grouping them into one list like inventory. What risks or bugs could
+this create as the dataset grows or gets reordered? Argue for or against
+using a list (or, later, a data frame) instead of separate vectors.</h4>
+<p>There would be risks like during sorting or reordering, passing of
+data, and adding or deleting. A list keeps related fields together to
+prevent mismatching and errors.</p>
+</div>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<div id="in-34-sentences-summarize-the-key-differences-between-vectors-and-lists-in-r-and-explain-when-you-would-choose-one-data-structure-over-the-other." class="section level4">
+<h4>In 3–4 sentences, summarize the key differences between vectors and
+lists in R, and explain when you would choose one data structure over
+the other.</h4>
+<p>Vectors hold only one element of a data type which is good for
+calculations and simple filtering. Lists can mix types and structures.
+Choose vector when doing calculations and all the value are the same
+kind. Choose a list when you want to bundle different types of data
+together.</p>
 </div>
 </div>
 
